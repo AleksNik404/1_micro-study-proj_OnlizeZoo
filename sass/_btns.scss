@@ -1,0 +1,246 @@
+.btn {
+  &,
+  &:link,
+  &:visited {
+    border: none;
+    font-family: 'Roboto', sans-serif;
+
+    height: 5.4rem;
+    width: 29.8rem;
+    padding: 1.6rem 0;
+    box-shadow: 0 2rem 3rem rgba($color-black, 0.2);
+
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.4;
+
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    background: $color-orange-hover;
+    color: $color-white;
+
+    transition: all 0.5s;
+    cursor: pointer;
+  }
+
+  &:hover {
+    background: $color-orange-hover2;
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 1.5rem rgba($color-black, 0.3);
+  }
+
+  &:active {
+    background: $color-green-hover2;
+
+    outline: none;
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.4);
+  }
+
+  &--oval {
+    border-radius: 25px;
+  }
+
+  &--square {
+    border-radius: 5px;
+  }
+}
+
+.btn-round {
+  height: 6.2rem;
+  width: 6.2rem;
+
+  border-radius: 50%;
+  border-style: none;
+  background: $color-orange-hover;
+
+  outline: none;
+  position: absolute;
+  top: 50%;
+
+  z-index: 9;
+
+  // box-shadow: 0 0.5rem 0.5rem 2.5rem rgba($color-black, 0.2);
+  box-shadow: 0 1rem 3rem rgba($color-black, 0.3);
+
+  transition: all 0.2s;
+  cursor: pointer;
+
+  // 624px
+  @media only screen and (max-width: 39em) {
+    display: none;
+  }
+
+  &:hover {
+    background: $color-orange-hover2;
+    // box-shadow: 0 0.5rem 2rem rgba($color-black, 0.2);
+    box-shadow: 0 0.5rem 1.5rem rgba($color-black, 0.5);
+  }
+
+  &:active {
+    background: $color-green-hover2;
+    // box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.7);
+  }
+
+  &__arrow {
+    width: 1.6rem;
+    height: 0.8rem;
+    position: relative;
+    z-index: 10;
+  }
+
+  &--left {
+    left: 0;
+    transform: translate(calc(-100% - 2rem), calc(-50%));
+
+    transition: all 1.3s;
+
+    justify-self: auto;
+
+    @media only screen and (max-width: 87.5em) {
+      grid-column: 2 / 3;
+      transform: translate(0, calc(-50%));
+    }
+
+    @media only screen and (max-width: 57.5em) {
+      left: auto;
+      grid-column: 1 / 2;
+      justify-self: end !important;
+      transform: translate(0, calc(-50%));
+    }
+  }
+
+  &--right {
+    right: 0;
+    transform: translate(calc(100% + 2rem), calc(-50%));
+
+    transition: all 1.3s;
+
+    @media only screen and (max-width: 87.5em) {
+      grid-column: 2 / 3;
+      transform: translate(0, calc(-50%));
+      // transform: translate(-387px, calc(-50%));
+    }
+
+    @media only screen and (max-width: 57.5em) {
+      right: auto;
+      grid-column: 2 / 3;
+      transform: translate(0, calc(-50%));
+    }
+  }
+}
+
+.btn-menu {
+  position: relative;
+  z-index: 100;
+
+  gap: 2px;
+  margin-left: auto;
+  height: 10px;
+  width: 18px;
+
+  transition: all 0.3s;
+  cursor: pointer;
+
+  display: none;
+
+  @media only screen and (max-width: 55em) {
+    display: grid;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 1.5em;
+    height: 1.3rem;
+    transform: scale(3);
+  }
+
+  & > * {
+    height: 0.2rem;
+    width: 1.8rem;
+    background-color: $color-white;
+
+    border-radius: 2px;
+
+    transition: all 0.3s;
+  }
+
+  &:hover > * {
+    background-color: $color-orange;
+  }
+
+  // &:hover .btn-menu--1 {
+  //     top: 0;
+  //     transform: translateY(4px) rotate(-225deg);
+  // }
+
+  // &:hover .btn-menu--2 {
+  //     opacity: 0;
+  // }
+
+  // &:hover .btn-menu--3 {
+  //     top: 0;
+  //     transform: translateY(-4px) rotate(225deg);
+  // }
+}
+
+.btn-menu--active .btn-menu--1 {
+  top: 0;
+  transform: translateY(4px) rotate(-225deg);
+  background-image: $color-orange-hover3;
+}
+
+.btn-menu--active .btn-menu--2 {
+  opacity: 0;
+}
+
+.btn-menu--active .btn-menu--3 {
+  top: 0;
+  transform: translateY(-4px) rotate(225deg);
+  background-image: $color-orange-hover3;
+}
+
+////////////////////////////
+/// Spinner loader
+///
+///
+
+.loader-box {
+  height: 400px;
+  // display: flex;
+  justify-content: center;
+
+  @media only screen and (max-width: 55em) {
+    height: 680px;
+  }
+
+  @media only screen and (max-width: 39em) {
+    height: 279px;
+  }
+}
+.loader {
+  border: 8px solid #f3f3f3; /* Light grey */
+  border-top: 8px solid $color-orange; /* Blue */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 0.8s linear infinite;
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}

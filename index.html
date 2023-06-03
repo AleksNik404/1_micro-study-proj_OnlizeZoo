@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online zoo</title>
+
+    <link rel="icon" type="image/x-icon" href="./assets/icons/favicon.png" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- <script defer src="./script.js"></script> -->
+    <script defer src="./animals.js"></script>
+    <script defer src="./script.js"></script>
+    <script defer src="./Menu-Popup.js"></script>
+  </head>
+  <body>
+    <div class="overlay hidden"></div>
+    <nav class="navigation">
+      <div class="nav container">
+        <div class="logo logo-top u-margin-right-medium">
+          <a class="logo__link" href="./index.html">
+            <svg class="logo-bamboo logo-bamboo-top">
+              <use href="./assets/icons/sprite.svg#logo-bamboo"></use>
+            </svg>
+            <h1 class="heading-1 heading-1-top">PetStory online</h1>
+          </a>
+        </div>
+
+        <ul class="nav-list nav-list-top">
+          <li class="nav-list__item">
+            <a href="./index.html" class="nav-list__link nav-list__link--active">About</a>
+          </li>
+          <li class="nav-list__item"><a href="#Map" class="nav-list__link">Map</a></li>
+          <li class="nav-list__item"><a href="#Zoos" class="nav-list__link">Zoos</a></li>
+          <li class="nav-list__item">
+            <a href="./donate.html" class="nav-list__link">Donate</a>
+          </li>
+          <li class="nav-list__item">
+            <a href="#Contact" class="nav-list__link">Contact us</a>
+          </li>
+          <li class="nav-list__item nav__copyright">
+            <a
+              href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online"
+              target="_blank"
+              >Designed by &copy;</a
+            >
+          </li>
+        </ul>
+
+        <div class="mobile-menu">
+          <div class="mobile-menu__wrapper">
+            <div class="mobile-logo">
+              <a class="mobile-logo__link" href="./index.html">
+                <svg class="mobile-logo__bamboo">
+                  <use href="./assets/icons/sprite.svg#logo-bamboo"></use>
+                </svg>
+                <p class="mobile-logo__heading">PetStory online</p>
+              </a>
+            </div>
+
+            <ul class="mobile-nav">
+              <li class="mobile-nav__list">
+                <a href="./index.html" class="mobile-nav__link mobile-nav__link--active">About</a>
+              </li>
+              <li class="mobile-nav__list"><a href="#Map" class="mobile-nav__link">Map</a></li>
+              <li class="mobile-nav__list"><a href="#Zoos" class="mobile-nav__link">Zoos</a></li>
+              <li class="mobile-nav__list">
+                <a href="./donate.html" class="mobile-nav__link">Donate</a>
+              </li>
+              <li class="mobile-nav__list">
+                <a href="#Contact" class="mobile-nav__link">Contact us</a>
+              </li>
+              <li class="mobile-nav__list mobile-nav__copyright">
+                <a
+                  class="mobile-nav__link"
+                  href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online"
+                  target="_blank"
+                  >Designed by &copy;</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="btn-menu">
+          <div class="btn-menu--1"></div>
+          <div class="btn-menu--2"></div>
+          <div class="btn-menu--3"></div>
+        </div>
+      </div>
+    </nav>
+    <header class="header">
+      <div class="container">
+        <div class="header-position">
+          <div class="header-box">
+            <h2 class="heading-2 header-box__heading">
+              Watch your <span class="heading-2--yellow">favorite</span> animal online
+            </h2>
+            <a
+              class="btn btn--oval header-box__btn-position"
+              href="https://youtu.be/uRazBEvOFsE?t=3"
+              target="_blank"
+              >Watch online</a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="backstage">
+      <img class="backstage-flower--1" src="./assets/images/flower.png" alt="flower" />
+      <div class="container">
+        <div class="backstage-box">
+          <img src="./assets/images/bamboo-cap.jpg" alt="Kasa man" class="backstage-box__img" />
+          <div class="backstage-box__text">
+            <div>
+              <h3 class="heading-3">The Backstage of the Wilderness World.</h3>
+              <p class="backstage-box__paragraph backstage-box__paragraph--1">
+                The site was founded on the basis of a volunteer movement to protect and care for
+                animals.
+              </p>
+            </div>
+            <div class="helper-margin">
+              <h4 class="heading-4">How it works</h4>
+              <p class="backstage-box__paragraph backstage-box__paragraph--2">
+                The main goal is to help the animals, as well as the nature reserves and zoos where
+                they are kept. We are currently working on video projects targeting pandas in China,
+                eagles on an island near Los Angeles, alligators in Florida and gorillas in the
+                Congo. These have a total of more than 1,500 mammals and reptiles.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="animals">
+      <div class="animals-box container">
+        <button class="btn-round btn-round--left">
+          <svg class="btn-round__arrow">
+            <use href="./assets/icons/sprite.svg#arrow-left"></use>
+          </svg>
+        </button>
+
+        <div class="carousel-wrapper">
+          <div class="carousel">
+            <div class="cards cards-left cards--active">
+              <div class="card card--1">
+                <div class="card__img-box">
+                  <img
+                    class="card__img"
+                    src="./assets/images/Animals_1_Pandas.jpg"
+                    alt="Giant pandas"
+                  />
+                </div>
+                <div class="card__description">
+                  <div class="card__text">
+                    <h5 class="card__h5">Giant Pandas</h5>
+                    <p class="card__paragraph">Native to Southwest China</p>
+                  </div>
+                  <svg class="card__icon-banan">
+                    <use href="./assets/icons/sprite.svg#banana_bamboo"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="card card--2">
+                <div class="card__img-box">
+                  <img class="card__img" src="./assets/images/Animals_2_Eagles.jpg" alt="Eagles" />
+                </div>
+                <div class="card__description">
+                  <div class="card__text">
+                    <h5 class="card__h5">Eagles</h5>
+                    <p class="card__paragraph">Native to South America</p>
+                  </div>
+                  <svg class="card__icon-meet">
+                    <use href="./assets/icons/sprite.svg#meet-fish-icon"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="card card--3">
+                <div class="card__img-box">
+                  <img
+                    class="card__img"
+                    src="./assets/images/Animals_3_Gorillas.jpg"
+                    alt="Gorillas"
+                  />
+                </div>
+                <div class="card__description">
+                  <div class="card__text">
+                    <h5 class="card__h5">Gorillas</h5>
+                    <p class="card__paragraph">Native to Congo</p>
+                  </div>
+                  <svg class="card__icon-banan">
+                    <use href="./assets/icons/sprite.svg#banana_bamboo"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="card card--4">
+                <div class="card__img-box">
+                  <img class="card__img" src="./assets/images/Animals_4_Sloth.jpg" alt="Sloth" />
+                </div>
+                <div class="card__description">
+                  <div class="card__text">
+                    <h5 class="card__h5">Two-toed Sloth</h5>
+                    <p class="card__paragraph">Mesoamerica, South America</p>
+                  </div>
+                  <svg class="card__icon-banan">
+                    <use href="./assets/icons/sprite.svg#banana_bamboo"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="card card--5">
+                <div class="card__img-box">
+                  <img
+                    class="card__img"
+                    src="./assets/images/Animals_5_Cheetahs.jpg"
+                    alt="Cheetahs"
+                  />
+                </div>
+                <div class="card__description">
+                  <div class="card__text">
+                    <h5 class="card__h5">cheetahs</h5>
+                    <p class="card__paragraph">Native to Africa</p>
+                  </div>
+                  <svg class="card__icon-meet">
+                    <use href="./assets/icons/sprite.svg#meet-fish-icon"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="card card--6">
+                <div class="card__img-box">
+                  <img
+                    class="card__img"
+                    src="./assets/images/Animals_6_Penguins.jpg"
+                    alt="Penguins"
+                  />
+                </div>
+                <div class="card__description">
+                  <div class="card__text">
+                    <h5 class="card__h5">Penguins</h5>
+                    <p class="card__paragraph">Native to Antarctica</p>
+                  </div>
+                  <svg class="card__icon-meet">
+                    <use href="./assets/icons/sprite.svg#meet-fish-icon"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="cards cards-cur">
+              <div class="card card--1">
+                <div class="card__img-box">
+                  <img
+                    class="card__img"
+                    src="./assets/images/Animals_1_Pandas.jpg"
+                    alt="Giant pandas"
+                  />
+                </div>
+                <div class="card__description">
+                  <div class="card__text">
+                    <h5 class="card__h5">Giant Pandas</h5>
+                    <p class="card__paragraph">Native to Southwest China</p>
+                  </div>
+                  <svg class="card__icon-banan">
+                    <use href="./assets/icons/sprite.svg#banana_bamboo"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="card card--2">
+                <div class="card__img-box">
+                  <img class="card__img" src="./assets/images/Animals_2_Eagles.jpg" alt="Eagles" />
+                </div>
+                <div class="card__description">
+                  <div class="card__text">
+                    <h5 class="card__h5">Eagles</h5>
+                    <p class="card__paragraph">Native to South America</p>
+                  </div>
+                  <svg class="card__icon-meet">
+                    <use href="./assets/icons/sprite.svg#meet-fish-icon"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="card card--3">
+                <div class="card__img-box">
+                  <img
+                    class="card__img"
+                    src="./assets/images/Animals_3_Gorillas.jpg"
+                    alt="Gorillas"
+                  />
+                </div>
+                <div class="card__description">
+                  <div class="card__text">
+                    <h5 class="card__h5">Gorillas</h5>
+                    <p class="card__paragraph">Native to Congo</p>
+                  </div>
+                  <svg class="card__icon-banan">
+                    <use href="./assets/icons/sprite.svg#banana_bamboo"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="card card--4">
+                <div class="card__img-box">
+                  <img class="card__img" src="./assets/images/Animals_4_Sloth.jpg" alt="Sloth" />
+                </div>
+                <div class="card__description">
+                  <div class="card__text">
+                    <h5 class="card__h5">Two-toed Sloth</h5>
+                    <p class="card__paragraph">Mesoamerica, South America</p>
+                  </div>
+                  <svg class="card__icon-banan">
+                    <use href="./assets/icons/sprite.svg#banana_bamboo"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="card card--5">
+                <div class="card__img-box">
+                  <img
+                    class="card__img"
+                    src="./assets/images/Animals_5_Cheetahs.jpg"
+                    alt="Cheetahs"
+                  />
+                </div>
+                <div class="card__description">
+                  <div class="card__text">
+                    <h5 class="card__h5">cheetahs</h5>
+                    <p class="card__paragraph">Native to Africa</p>
+                  </div>
+                  <svg class="card__icon-meet">
+                    <use href="./assets/icons/sprite.svg#meet-fish-icon"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="card card--6">
+                <div class="card__img-box">
+                  <img
+                    class="card__img"
+                    src="./assets/images/Animals_6_Penguins.jpg"
+                    alt="Penguins"
+                  />
+                </div>
+                <div class="card__description">
+                  <div class="card__text">
+                    <h5 class="card__h5">Penguins</h5>
+                    <p class="card__paragraph">Native to Antarctica</p>
+                  </div>
+                  <svg class="card__icon-meet">
+                    <use href="./assets/icons/sprite.svg#meet-fish-icon"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="cards cards-right cards--active">
+              <div class="card card--1">
+                <div class="card__img-box">
+                  <img
+                    class="card__img"
+                    src="./assets/images/Animals_1_Pandas.jpg"
+                    alt="Giant pandas"
+                  />
+                </div>
+                <div class="card__description">
+                  <div class="card__text">
+                    <h5 class="card__h5">Giant Pandas</h5>
+                    <p class="card__paragraph">Native to Southwest China</p>
+                  </div>
+                  <svg class="card__icon-banan">
+                    <use href="./assets/icons/sprite.svg#banana_bamboo"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="card card--2">
+                <div class="card__img-box">
+                  <img class="card__img" src="./assets/images/Animals_2_Eagles.jpg" alt="Eagles" />
+                </div>
+                <div class="card__description">
+                  <div class="card__text">
+                    <h5 class="card__h5">Eagles</h5>
+                    <p class="card__paragraph">Native to South America</p>
+                  </div>
+                  <svg class="card__icon-meet">
+                    <use href="./assets/icons/sprite.svg#meet-fish-icon"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="card card--3">
+                <div class="card__img-box">
+                  <img
+                    class="card__img"
+                    src="./assets/images/Animals_3_Gorillas.jpg"
+                    alt="Gorillas"
+                  />
+                </div>
+                <div class="card__description">
+                  <div class="card__text">
+                    <h5 class="card__h5">Gorillas</h5>
+                    <p class="card__paragraph">Native to Congo</p>
+                  </div>
+                  <svg class="card__icon-banan">
+                    <use href="./assets/icons/sprite.svg#banana_bamboo"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="card card--4">
+                <div class="card__img-box">
+                  <img class="card__img" src="./assets/images/Animals_4_Sloth.jpg" alt="Sloth" />
+                </div>
+                <div class="card__description">
+                  <div class="card__text">
+                    <h5 class="card__h5">Two-toed Sloth</h5>
+                    <p class="card__paragraph">Mesoamerica, South America</p>
+                  </div>
+                  <svg class="card__icon-banan">
+                    <use href="./assets/icons/sprite.svg#banana_bamboo"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="card card--5">
+                <div class="card__img-box">
+                  <img
+                    class="card__img"
+                    src="https://s1.1zoom.ru/big0/475/Men_Clown_Makeup_Hair_Surprise_emotion_562052_1280x905.jpg"
+                    alt="Cheetahs"
+                  />
+                </div>
+                <div class="card__description">
+                  <div class="card__text">
+                    <h5 class="card__h5">cheetahs</h5>
+                    <p class="card__paragraph">Native to Africa</p>
+                  </div>
+                  <svg class="card__icon-meet">
+                    <use href="./assets/icons/sprite.svg#meet-fish-icon"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="card card--6">
+                <div class="card__img-box">
+                  <img
+                    class="card__img"
+                    src="./assets/images/Animals_6_Penguins.jpg"
+                    alt="Penguins"
+                  />
+                </div>
+                <div class="card__description">
+                  <div class="card__text">
+                    <h5 class="card__h5">Penguins</h5>
+                    <p class="card__paragraph">Native to Antarctica</p>
+                  </div>
+                  <svg class="card__icon-meet">
+                    <use href="./assets/icons/sprite.svg#meet-fish-icon"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="btn-round btn-round--right">
+          <svg class="btn-round__arrow">
+            <use href="./assets/icons/sprite.svg#arrow-right"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="container u-align-center btn-animals">
+        <a class="btn btn--oval" href="#Map">Choose Your favorite</a>
+      </div>
+      <img class="animal-flower--2" src="./assets/images/palm_foto_.png" alt="palm" />
+      <img class="animal-flower--3" src="./assets/images/strelitzia.png" alt="Strelitzia flower" />
+    </section>
+    <section class="donation">
+      <div class="container feed">
+        <h3 class="heading-3 feed__heading-3 feed__heading-3--orange">Pick and feed a friend</h3>
+        <div class="feed__text-box">
+          <h4 class="feed__heading-4">
+            We know the animals bring you joy, and in these extraordinary times, we’re glad.
+          </h4>
+          <p class="feed__paragraph--1">
+            During a time when the COVID-19 epidemic is touching all of our lives, we’re proud and
+            glad that people around the world find joy in PetStory.
+          </p>
+          <p class="feed__paragraph--2">
+            Even though the zoo has reopened, we need you now more than ever to help us deal with
+            these problems. Please consider a gift to our
+            <a class="emerg-support-link" href="./donate.html">Emergency Support Fund</a>
+            .
+          </p>
+        </div>
+        <h3 class="heading-3 feed__how-it-works u-align-center">How it works</h3>
+
+        <div class="feed__pay-grid">
+          <div class="feed__pay-box feed__pay-box--1">
+            <img src="./assets/icons/pay_card.svg" alt="card icon" />
+          </div>
+
+          <img class="feed__pay-arrow--1" src="./assets/icons/pay_arrow.svg" alt="arrow" />
+
+          <div class="feed__pay-box feed__pay-box--2">
+            <svg class="feed_tree-icon">
+              <use href="./assets/icons/sprite.svg#tree"></use>
+            </svg>
+          </div>
+
+          <img class="feed__pay-arrow--2" src="./assets/icons/pay_arrow.svg" alt="arrow" />
+
+          <div class="feed__pay-box feed__pay-box--3">
+            <img src="./assets/icons/monkey.svg" alt="monkey icon" />
+          </div>
+          <p class="feed__pay-text feed__pay-text--1">Pay with card</p>
+          <p class="feed__pay-text feed__pay-text--2">Payment goes to the zoo</p>
+          <p class="feed__pay-text feed__pay-text--3">Your favourite animal gets delicious dish</p>
+          <a href="./donate.html" class="btn btn--oval feed__btn">Feed a friend now</a>
+        </div>
+      </div>
+    </section>
+    <section class="testimonials">
+      <div class="container testimonials-box">
+        <h3 class="testimonials-heading">Testimonials</h3>
+        <div class="reviews-box" style="overflow: hidden">
+          <div class="loader-box"><div class="loader"></div></div>
+        </div>
+        <div class="parrent-box-range">
+          <div class="gradient-border"></div>
+          <input class="range" type="range" value="0" min="0" max="7" step="1" />
+        </div>
+        <a href="#empty" class="btn btn--square testimonials__btn">leave feedback</a>
+      </div>
+      <img class="leaf" src="./assets/images/leaf.png" alt="Leaf" />
+      <div class="rev-popup">
+        <div class="rev-closeBtn-box">
+          <svg class="rev-closeBtn">
+            <use href="./assets/icons/sprite.svg#rev-closeBtn"></use>
+          </svg>
+        </div>
+        <div class="rev-card">
+          <div class="rev-card__header">
+            <img class="rev-card__icon" src="./assets/icons/card-4.png" alt="User photo" />
+            <div>
+              <p class="rev-card__name">Mila Riksha</p>
+              <p class="rev-card__location">
+                <span class="rev-card__span-1">Local Austria</span>
+                &bull;
+                <span class="rev-card__span-2">Yesterday</span>
+              </p>
+            </div>
+          </div>
+          <div class="rev-card__body">
+            <p class="rev-card__text">
+              My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to
+              instill a love for animals.The best online zoo I’ve met. My son delighted very much
+              ljves to watch gouillas. Online zoo is one jf the ways to instill a love for
+              animals.The best online zoo I’ve met. My son delighted very much ljves to watch
+              gouillas. Online zoo is one jf the ways to instill a love for animals.The best online
+              zoo I’ve met. My son delighted very much ljves to watch gouillas.<br />
+              The best online zoo I’ve met. My son delighted very much ljves to watch gouillas.
+              Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve
+              met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways
+              to instill a love for animals.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container footer-box">
+        <div class="logo footer__logo">
+          <a class="logo__link" href="./index.html">
+            <svg class="logo-bamboo footer--bamboo">
+              <use href="assets/icons/sprite.svg#logo-bamboo"></use>
+            </svg>
+            <p class="heading-1">PetStory online</p>
+          </a>
+        </div>
+        <form class="form-subscribe">
+          <label for="email" class="form-subscribe__label">Subscribe to our news</label>
+          <div class="form-subscribe__submit-box">
+            <input
+              type="email"
+              class="form-subscribe__input-email"
+              id="email"
+              placeholder="Enter your email"
+              required
+            />
+            <input class="form-subscribe__btn-submit" type="submit" value="Submit" />
+          </div>
+        </form>
+        <a href="./donate.html" class="btn btn--square footer__btn">donate for volunteers</a>
+
+        <ul class="social-links">
+          <li class="social-list">
+            <a href="https://facebook.com/" class="social-list__item" target="_blank"
+              ><svg class="social-list__icon">
+                <use href="./assets/icons/sprite.svg#facebook"></use>
+              </svg>
+              <span class="social-list__text">Facebook</span></a
+            >
+          </li>
+          <li class="social-list">
+            <a href="https://twitter.com/" class="social-list__item" target="_blank"
+              ><svg class="social-list__icon">
+                <use href="./assets/icons/sprite.svg#twitter"></use>
+              </svg>
+              <span class="social-list__text">Twitter</span></a
+            >
+          </li>
+          <li class="social-list">
+            <a href="https://www.instagram.com" class="social-list__item" target="_blank"
+              ><svg class="social-list__icon">
+                <use href="./assets/icons/sprite.svg#instagram"></use>
+              </svg>
+              <span class="social-list__text">Instagram</span></a
+            >
+          </li>
+          <li class="social-list">
+            <a href="https://www.youtube.com/" class="social-list__item" target="_blank"
+              ><svg class="social-list__icon">
+                <use href="./assets/icons/sprite.svg#youtube"></use>
+              </svg>
+              <span class="social-list__text">YouTube</span></a
+            >
+          </li>
+        </ul>
+        <nav class="footer-nav">
+          <ul class="nav-list footer-nav__list">
+            <li class="nav-list__item">
+              <a href="./index.html" class="nav-list__link nav-list__link--active">About</a>
+            </li>
+            <li class="nav-list__item">
+              <a href="#Map" class="nav-list__link">Map</a>
+            </li>
+            <li class="nav-list__item">
+              <a href="#Zoos" class="nav-list__link">Zoos</a>
+            </li>
+            <li class="nav-list__item">
+              <a href="#Contact" class="nav-list__link">Contact us</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="footer__copyright">
+          <a
+            href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online"
+            class="footer__copyright--paragraph-1"
+            target="_blank"
+            >Designed by Alisa Samborskaya</a
+          >
+          <a
+            href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online"
+            class="footer__copyright--paragraph-2"
+            target="_blank"
+          >
+            &copy;RSSchool & &copy;Yem Digital 2021
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

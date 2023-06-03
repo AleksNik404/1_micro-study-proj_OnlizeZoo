@@ -1,0 +1,205 @@
+.card {
+  border: 1px solid #f96e32;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 #f39d7833;
+  overflow: hidden;
+
+  transition: all 1s;
+
+  position: relative;
+
+  &__img-box {
+    // overflow: hidden;
+    // object-fit: cover;
+
+    // height: 36.6rem;
+    // width: 36.6rem;
+
+    width: 100%;
+    position: relative;
+    padding-top: 100%;
+
+    // overflow: hidden;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+
+    transition: all 1s;
+  }
+
+  &__icon-banan {
+    height: 3.7rem;
+    width: 3.3rem;
+    transition: all 0.3s;
+
+    @media only screen and (max-width: 55em) {
+      transform: scale(0.8);
+    }
+  }
+
+  &__icon-meet {
+    height: 3.8rem;
+    width: 4.8rem;
+    transition: all 0.3s;
+
+    @media only screen and (max-width: 55em) {
+      transform: scale(0.8);
+    }
+  }
+
+  &__description {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    position: relative;
+    z-index: 2;
+
+    padding: 0.5rem 1rem 1.35rem 1.6rem;
+
+    @media only screen and (max-width: 65em) {
+      padding: 0.6rem 1rem 1.2rem 1.5rem;
+    }
+
+    @media only screen and (max-width: 55em) {
+      font-size: 1.3rem;
+      font-weight: 500;
+      line-height: 1.2;
+
+      padding: 0rem 0.4rem 0.4rem 1.2rem;
+    }
+  }
+
+  &__text {
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.2;
+
+    transition: all 1s;
+
+    @media only screen and (max-width: 55em) {
+      font-size: 1.2rem;
+      font-weight: 500;
+      line-height: 1.4;
+    }
+  }
+
+  &__h5 {
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.4;
+    text-transform: uppercase;
+
+    @media only screen and (max-width: 55em) {
+      font-size: 1.3rem;
+      font-weight: 600;
+      line-height: 1.2;
+    }
+  }
+
+  &__paragraph {
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1;
+
+    @media only screen and (max-width: 55em) {
+      font-size: 1.2rem;
+      font-weight: 400;
+      line-height: 1;
+    }
+  }
+
+  &--1 {
+  }
+
+  &--2 {
+  }
+
+  &--3 {
+    // 1016px
+    @media only screen and (max-width: 63.5em) {
+      grid-column: 1;
+      grid-row: 2 / 3;
+    }
+
+    // 624px
+    @media only screen and (max-width: 39em) {
+      grid-row: auto;
+    }
+  }
+
+  &--4 {
+    @media only screen and (max-width: 63.5em) {
+      display: none;
+    }
+  }
+
+  &--5 {
+    @media only screen and (max-width: 63.5em) {
+      grid-column: 3;
+      grid-row: 1 / 2;
+    }
+
+    @media only screen and (max-width: 57.5em) {
+      display: none;
+    }
+  }
+
+  &--6 {
+    @media only screen and (max-width: 57.5em) {
+      display: none;
+    }
+  }
+
+  &--7 {
+    display: none;
+
+    @media only screen and (max-width: 63.5em) {
+      display: block;
+      grid-column: 2;
+      grid-row: 2 / 3;
+    }
+
+    // 624px
+    @media only screen and (max-width: 39em) {
+      grid-column: 1;
+      grid-row: auto;
+    }
+  }
+
+  &:hover {
+    background-color: #f39d78;
+    box-shadow: 0 8px 16px 0 #f39d7833;
+  }
+
+  &:hover img {
+    transform: scale(1.1);
+    filter: brightness(50%);
+  }
+
+  &:hover .card__text {
+    transform: translate(0, -100%);
+    color: $color-white;
+
+    text-shadow: 1px 1px 2px black;
+  }
+
+  &:hover .card__icon-meet {
+    opacity: 0;
+  }
+
+  &:hover .card__icon-banan {
+    opacity: 0;
+  }
+}
